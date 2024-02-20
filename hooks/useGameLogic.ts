@@ -11,6 +11,7 @@ export const useGameLogic = () => {
   const [responseType, setResponseType] = useState(0);
   const [score, setScore] = useState(0); // The score of the user
   const [totalQuestions, setTotalQuestions] = useState(0);
+  const [error, setError] = useState(''); // if you want to go to the next without guessing
 
   // Function to handle the input change
   const handleInputChange = (e: any) => {
@@ -36,14 +37,20 @@ export const useGameLogic = () => {
     // Convert the guess and country names to lowercase for case-insensitive comparison
     const lowerCaseGuess = guess.toLowerCase().trimEnd();
     const lowerCaseCountryNames = currentCountry.name.map((name) => name.toLowerCase());
+    if (guess === '') {
+      setError('Please enter a guess');
+      return;
+    }
     // Check if the guess is included in the lowercase country names
     if (lowerCaseCountryNames.includes(lowerCaseGuess)) {
       setResponse(correctResponses[Math.floor(Math.random() * correctResponses.length)]);
       setResponseType(1);
       setScore(score + 1);
+      setError('');
     } else {
       setResponse(incorrectResponses[Math.floor(Math.random() * incorrectResponses.length)]);
       setResponseType(0);
+      setError('');
     }
     setTotalQuestions(totalQuestions + 1);
   };
@@ -65,5 +72,5 @@ export const useGameLogic = () => {
     setResponseType(0);
   };
 
-  return { isChecked, guess, currentCountry, isCountryLoading, response, score, totalQuestions, handleInputChange, handleCheck, handleNext, handleReset, responseType };
+  return { isChecked, guess, currentCountry, isCountryLoading, response, score, totalQuestions, handleInputChange, handleCheck, handleNext, handleReset, responseType, error };
 };

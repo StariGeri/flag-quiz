@@ -20,7 +20,7 @@ const QuizPage = () => {
         score,
         totalQuestions
     } = useGameLogic();
-    
+
     return (
         <div className="w-full h-full flex flex-col justify-center items-center px-2">
             <h1 className="font-bold text-white text-lg md:text-xl lg:text-2xl mb-4 md:mb-8 lg:mb-10">Which countrys flag is this?</h1>
@@ -35,14 +35,21 @@ const QuizPage = () => {
                 placeholder="Take your guess.."
                 value={guess}
                 onChange={handleInputChange}
+                disabled={isChecked}
             />
-            <div className="w-full flex items-center justify-center gap-4">
-                <button className="text-white border border-[#ff0054] px-8 py-2 rounded-lg mt-4 text-lg" onClick={handleReset}>Reset</button>
+            <div className="w-full flex flex-col sm:flex-row items-center justify-center gap-4">
                 {!isChecked ?
-                    <button className="bg-[#14B8A6] text-white px-8 py-2 rounded-lg mt-4 text-lg" onClick={handleCheck}>Check</button>
+                    <button
+                        className="bg-[#14B8A6] text-white px-8 py-2 rounded-lg mt-4 text-lg"
+                        onClick={handleCheck}
+                        disabled={guess === ''}
+                    >
+                        Check
+                    </button>
                     :
                     <button className="bg-[#2F71F0] text-white px-8 py-2 rounded-lg mt-4 text-lg" onClick={handleNext}>Next</button>
                 }
+                <button className="text-white border border-[#ff0054] px-8 py-2 rounded-lg sm:mt-4 text-lg mt-2" onClick={handleReset}>Reset</button>
             </div>
             <div className="w-fit h-12">
                 {response !== '' && isChecked &&
