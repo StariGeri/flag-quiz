@@ -23,7 +23,7 @@ const QuizPage = () => {
     
     return (
         <div className="w-full h-full flex flex-col justify-center items-center px-2">
-            <h1 className="font-bold text-white text-lg md:text-xl lg:text-2xl mb-4 md:mb-8 lg:mb-10">Which country's flag is this?</h1>
+            <h1 className="font-bold text-white text-lg md:text-xl lg:text-2xl mb-4 md:mb-8 lg:mb-10">Which countrys flag is this?</h1>
             <p className="text-white font-semibold">Score: {score} / {totalQuestions}</p>
             <QuizCard country={currentCountry} isLoading={isCountryLoading} />
             <div className="h-12">

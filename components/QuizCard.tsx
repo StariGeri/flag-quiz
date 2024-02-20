@@ -15,7 +15,7 @@ const QuizCard = ({ country, isLoading }: QuizCardProps) => {
             {isLoading ?
                 <div className="w-64 h-40 bg-slate-950 animate-pulse"></div>
                 :
-                <img src={flagLink} alt="Which country's flag is this?" className="w-[80px] h-auto" />
+                <img src={flagLink} alt="Which countrys flag is this?" className="w-[80px] h-auto" />
             }
         </div>
     );
