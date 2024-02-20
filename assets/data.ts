@@ -188,7 +188,7 @@ export const countries = [
   { name: ['Saint Martin'], code: 'MF' },
   { name: ['Madagascar'], code: 'MG' },
   { name: ['Marshall Islands'], code: 'MH' },
-  { name: ['Macedonia, North Macedonia'], code: 'MK' },
+  { name: ['Macedonia', 'North Macedonia'], code: 'MK' },
   { name: ['Mali'], code: 'ML' },
   { name: ['Myanmar'], code: 'MM' },
   { name: ['Mongolia'], code: 'MN' },
