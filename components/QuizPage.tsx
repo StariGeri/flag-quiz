@@ -37,7 +37,7 @@ const QuizPage = () => {
                 onChange={handleInputChange}
                 disabled={isChecked}
             />
-            <div className="w-full flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="w-full flex flex-col sm:flex-row-reverse items-center justify-center gap-4">
                 {!isChecked ?
                     <button
                         className="bg-[#14B8A6] text-white px-8 py-2 rounded-lg mt-4 text-lg"
