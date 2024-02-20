@@ -34,7 +34,7 @@ export const useGameLogic = () => {
   const handleCheck = () => {
     setIsChecked(true);
     // Convert the guess and country names to lowercase for case-insensitive comparison
-    const lowerCaseGuess = guess.toLowerCase();
+    const lowerCaseGuess = guess.toLowerCase().trimEnd();
     const lowerCaseCountryNames = currentCountry.name.map((name) => name.toLowerCase());
     // Check if the guess is included in the lowercase country names
     if (lowerCaseCountryNames.includes(lowerCaseGuess)) {

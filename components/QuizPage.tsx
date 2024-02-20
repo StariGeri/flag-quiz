@@ -36,12 +36,12 @@ const QuizPage = () => {
                 value={guess}
                 onChange={handleInputChange}
             />
-            <div className="w-full flex items-center justify-center gap-2">
-                <button className="text-white border border-[#ff0054] px-5 py-2 rounded-lg mt-4" onClick={handleReset}>Reset</button>
+            <div className="w-full flex items-center justify-center gap-4">
+                <button className="text-white border border-[#ff0054] px-8 py-2 rounded-lg mt-4 text-lg" onClick={handleReset}>Reset</button>
                 {!isChecked ?
-                    <button className="bg-[#14B8A6] text-white px-5 py-2 rounded-lg mt-4" onClick={handleCheck}>Check</button>
+                    <button className="bg-[#14B8A6] text-white px-8 py-2 rounded-lg mt-4 text-lg" onClick={handleCheck}>Check</button>
                     :
-                    <button className="bg-[#2F71F0] text-white px-5 py-2 rounded-lg mt-4" onClick={handleNext}>Next</button>
+                    <button className="bg-[#2F71F0] text-white px-8 py-2 rounded-lg mt-4 text-lg" onClick={handleNext}>Next</button>
                 }
             </div>
             <div className="w-fit h-12">

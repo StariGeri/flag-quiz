@@ -13,7 +13,7 @@ const HomePage = () => {
                         Literally the best  <span className="font-extrabold">FlagQuiz</span>  ever
                     </p>
                     <p className="text-white z-10 mt-4">Its not just me, try it for yourself</p>
-                    <Link href="/quiz" className="bg-[#2F71F0] text-white px-5 py-2 rounded-lg mt-4">
+                    <Link href="/quiz" className="bg-[#2F71F0] text-white px-8 py-2 rounded-lg mt-4 text-lg">
                         Play
                     </Link>
                 </div>
